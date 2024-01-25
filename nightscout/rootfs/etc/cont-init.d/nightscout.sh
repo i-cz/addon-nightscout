@@ -6,6 +6,9 @@
 
 readonly api_key=$(bashio::config 'api_key')
 readonly mongodb_uri=$(bashio::config 'mongodb_uri')
+readonly connect_source=$(bashio::config 'connect_source')
+readonly connect_link_up_username=$(bashio::config 'connect_link_up_username')
+readonly connect_link_up_password=$(bashio::config 'connect_link_up_password')
 
 bashio::log.info "Setting up API KEY: ${api_key}"
 export API_SECRET="${api_key}"
