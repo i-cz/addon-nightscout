@@ -22,7 +22,8 @@ readonly connect_link_up_username=$(bashio::config 'connect_link_up_username')
 bashio::log.debug "Setting up CONNECT_LINK_UP_USERNAME: ${connect_link_up_username}"
 readonly connect_link_up_password=$(bashio::config 'connect_link_up_password')
 bashio::log.debug "Setting up CONNECT_LINK_UP_PASSWORD: 'connect_link_up_password'"
-
+readonly connect_link_up_server=$(bashio::config 'connect_link_up_server')
+bashio::log.debug "Setting up CONNECT_LINK_UP_SERVER: 'connect_link_up_server'"
 
 export API_SECRET="${api_key}"
 export HOSTNAME="127.0.0.1"
@@ -34,6 +35,7 @@ export SECURE_HSTS_HEADER=false
 export CONNECT_SOURCE="${connect_source}"
 export CONNECT_LINK_UP_USERNAME="${connect_link_up_username}"
 export CONNECT_LINK_UP_PASSWORD="${connect_link_up_password}"
+export CONNECT_LINK_UP_SERVER="${connect_link_up_server}"
 
 if bashio::config.has_value 'auth_default_roles'; then
     readonly auth_default_roles=$(bashio::config 'auth_default_roles')

@@ -31,6 +31,7 @@
     "connect_source": "linkup",
     "connect_link_up_username": "",
     "connect_link_up_password": "",
+    "connect_link_up_server": "api-eu.libreview.io",
     "plugins": [
       "careportal",
       "boluscalc",
