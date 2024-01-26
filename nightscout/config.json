@@ -32,6 +32,7 @@
     "connect_link_up_username": "",
     "connect_link_up_password": "",
     "connect_link_up_server": "api-eu.libreview.io",
+    "connect_link_up_region": "EU",
     "plugins": [
       "careportal",
       "boluscalc",
@@ -62,6 +63,7 @@
     "connect_link_up_username": "str",
     "connect_link_up_password": "str",
     "connect_link_up_server": "str",
+    "connect_link_up_region": "str",
     "auth_default_roles": "list(admin|denied|status-only|readable|careportal|devicestatus-upload|activity)?",
     "theme": "list(default|colors|colorblindfriendly)",
     "import_config_url": "str?",
