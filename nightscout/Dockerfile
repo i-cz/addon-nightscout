@@ -63,7 +63,7 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Marcio Granzotto <oscensores@gmail.com>" \
+    maintainer="Ivo Hlavaty <ihlavaty.cz@gmail.com>" \
     org.opencontainers.image.title="Nightscout" \
     org.opencontainers.image.description="Nightscout acts as a web-based CGM (Continuous Glucose Montinor) to allow multiple caregivers to remotely view a patients glucose data in realtime." \
     org.opencontainers.image.vendor="Marcio Granzotto" \

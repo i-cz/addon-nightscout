@@ -6,6 +6,7 @@ on:
 
 jobs:
   build-amd64:
+    if: {{ vars.AMD64 == 'true' }}
     name: Build and publish amd64 image
     runs-on: ubuntu-latest
     steps:
@@ -45,12 +46,12 @@ jobs:
       - name: publish aarch64 docker files
         if: github.event_name != 'pull_request'
         run: docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v ~/.docker:/root/.docker -v "$(pwd)":/data homeassistant/amd64-builder	-t nightscout --aarch64 --release-tag --docker-user ihlcz --docker-password ${{ secrets.DOCKER_PASSWORD }}
-  update-main-repo:
-    needs: [build-amd64, build-aarch64]
-    name: Update addons repository
-    runs-on: ubuntu-latest
-    container:
-      image: hassioaddons/repository-updater:latest
-    steps:
-      - name: upload
-        run: repository-updater --token ${{ secrets.GIT_TOKEN }} --repository i-cz/addons-repository --addon nightscout
+  #update-main-repo:
+  #  needs: [build-amd64, build-aarch64]
+  #  name: Update addons repository
+  #  runs-on: ubuntu-latest
+  #  container:
+  #    image: hassioaddons/repository-updater:latest
+  #  steps:
+  #    - name: upload
+  #      run: repository-updater --token ${{ secrets.GIT_TOKEN }} --repository i-cz/addons-repository --addon nightscout
