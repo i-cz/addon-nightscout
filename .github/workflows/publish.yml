@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-amd64:
-    if: {{ vars.AMD64 == 'true' }}
+    if: vars.AMD64 == 'true'
     name: Build and publish amd64 image
     runs-on: ubuntu-latest
     steps:
