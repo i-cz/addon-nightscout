@@ -13,6 +13,10 @@ readonly connect_link_up_server=$(bashio::config 'connect_link_up_server')
 readonly connect_link_up_region=$(bashio::config 'connect_link_up_region')
 readonly connect_glooko_email=$(bashio::config 'connect_glooko_email')
 readonly connect_glooko_password=$(bashio::config 'connect_glooko_password')
+readonly connect_glooko_env=$(bashio::config 'connect_glooko_env')
+readonly connect_glooko_server=$(bashio::config 'connect_glooko_server')
+readonly connect_glooko_timezone_offset=$(bashio::config 'connect_glooko_timezone_offset')
+
 
 
 bashio::log.info "Setting up API KEY: ${api_key}"
@@ -26,3 +30,6 @@ export CONNECT_LINK_UP_SERVER="${connect_link_up_server}"
 export CONNECT_LINK_UP_REGION="${connect_link_up_region}"
 export CONNECT_GLOOKO_EMAIL="${connect_glooko_email}"
 export CONNECT_GLOOKO_PASSWORD="${connect_glooko_password}"
+export CONNECT_GLOOKO_ENV="${connect_glooko_env}"
+export CONNECT_GLOOKO_SERVER="${connect_glooko_server}"
+export CONNECT_GLOOKO_TIMEZONE_OFFSET="${connect_glooko_timezone_offset}"
