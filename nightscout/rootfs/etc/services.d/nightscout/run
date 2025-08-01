@@ -36,7 +36,12 @@ readonly connect_glooko_server=$(bashio::config 'connect_glooko_server')
 bashio::log.debug "Setting up CONNECT_GLOOKO_SERVER: ${connect_glooko_server}"
 readonly connect_glooko_timezone_offset=$(bashio::config 'connect_glooko_timezone_offset')
 bashio::log.debug "Setting up CONNECT_GLOOKO_TIMEZONE_OFFSET: ${connect_glooko_timezone_offset}"
-
+readonly connect_share_account_name=$(bashio::config 'connect_share_account_name')
+bashio::log.debug "Setting up CONNECT_SHARE_ACCOUNT_NAME: ${connect_share_account_name}"
+readonly connect_share_password=$(bashio::config 'connect_share_password')
+bashio::log.debug "Setting up CONNECT_SHARE_PASSWORD: ${connect_share_password}"
+readonly connect_share_region=$(bashio::config 'connect_share_region')
+bashio::log.debug "Setting up CONNECT_SHARE_REGION: ${connect_share_region}"
 
 export API_SECRET="${api_key}"
 export HOSTNAME="127.0.0.1"
@@ -55,6 +60,10 @@ export CONNECT_GLOOKO_PASSWORD="${connect_glooko_password}"
 export CONNECT_GLOOKO_ENV="${connect_glooko_env}"
 export CONNECT_GLOOKO_SERVER="${connect_glooko_server}"
 export CONNECT_GLOOKO_TIMEZONE_OFFSET="${connect_glooko_timezone_offset}"
+export CONNECT_SHARE_ACCOUNT_NAME="${connect_share_account_name}"
+export CONNECT_SHARE_PASSWORD="${connect_share_password}"
+export CONNECT_SHARE_REGION="${connect_share_region}"
+
 
 if bashio::config.has_value 'auth_default_roles'; then
     readonly auth_default_roles=$(bashio::config 'auth_default_roles')
