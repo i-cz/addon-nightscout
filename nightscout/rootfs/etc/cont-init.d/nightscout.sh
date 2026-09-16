@@ -21,7 +21,7 @@ readonly connect_share_password=$(bashio::config 'connect_share_password')
 readonly connect_share_region=$(bashio::config 'connect_share_region')
 
 
-
+export DISPLAY_UNITS="mmol"
 bashio::log.info "Setting up API KEY: ${api_key}"
 export API_SECRET="${api_key}"
 bashio::log.info "Using Mongo URI: ${mongodb_uri}"
